@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Search Results{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Search Results</h2>
+    {% if user %}
+        <p>User found: <a href="/user/{{ user.id }}">{{ user.name }}</a></p>
+    {% else %}
+        <p>User not found.</p>
+    {% endif %}
+    <a href="/" class="btn btn-secondary">Back</a>
+</div>
+{% endblock %}
